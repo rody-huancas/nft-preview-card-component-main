@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --SoftBlue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --DarkBlueMain: hsl(217, 54%, 11%);
+  --DarkBlueCard: hsl(216, 50%, 16%);
+  --DarkBlueLine: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*Para que 1rem = 10px*/
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--DarkBlueMain);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target {
+  width: 320px;
+  height: 550px;
+  background-color: var(--DarkBlueCard);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.target .target-img {
+  position: relative;
+}
+
+.target .target-img img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.target .target-img .view {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.target .target-img .view img {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.target .target-img .view:hover {
+  transition: all 0.5s ease;
+  cursor: pointer;
+  opacity: 1;
+  background-color: hsla(178, 100%, 50%, 0.395);
+}
+
+.target .target-title {
+  color: var(--White);
+}
+
+.target .target-description {
+  color: var(--SoftBlue);
+  font-size: 1.6rem;
+}
+
+.target .target-other {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.target .target-other .eth {
+  display: flex;
+  align-items: center;
+  color: var(--Cyan);
+  font-size: 1.5rem;
+  gap: 0.5rem;
+}
+
+.target .target-other .days {
+  display: flex;
+  align-items: center;
+  color: var(--SoftBlue);
+  gap: 0.5rem;
+}
+.target .target-line {
+  display: flex;
+}
+
+.target .target-line::after {
+  content: "";
+  border-bottom: 0.1rem solid var(--SoftBlue);
+  width: 100%;
+  height: 1px;
+}
+
+.target .target-creation {
+  display: flex;
+  align-items: center;
+  color: var(--SoftBlue);
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+
+.target .target-creation img {
+  width: 30px;
+  border: 0.1rem solid var(--White);
+  border-radius: 50%;
+}
+
+.target .target-creation p span {
+  color: var(--White);
+}
+
+.target .target-creation p span:hover,
+.target .target-title:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: -9rem;
+  font-size: 1.5rem;
+  color: var(--White);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--Cyan);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
